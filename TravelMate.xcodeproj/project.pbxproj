@@ -10,23 +10,9 @@
 		9E8CCCEA2E0F8FB400BF6359 /* TravelMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9E8CCCF92E15C43F00BF6359 /* Exceptions for "TravelMate" folder in "TravelMate" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Untitled 2.swift",
-				Untitled.swift,
-			);
-			target = 9E8CCCE92E0F8FB400BF6359 /* TravelMate */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9E8CCCEC2E0F8FB400BF6359 /* TravelMate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9E8CCCF92E15C43F00BF6359 /* Exceptions for "TravelMate" folder in "TravelMate" target */,
-			);
 			path = TravelMate;
 			sourceTree = "<group>";
 		};
