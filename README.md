@@ -18,13 +18,6 @@ TravelMate is a mobile travel planning app built for iOS using Swift and Xcode. 
 - Swift programming language
 - iOS Simulator (iPhone 16 Pro Max)
 
-## Next Steps
-
-- Add multiple screens for itinerary management and trip summaries
-- Integrate device features such as location services to suggest nearby attractions
-- Implement local data storage to save itineraries persistently
-- Enhance UI/UX design for better usability and visual appeal
-
 ## How to Run
 
 1. Open the project in Xcode.
