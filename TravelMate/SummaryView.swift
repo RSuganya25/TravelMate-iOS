@@ -6,24 +6,29 @@ struct SummaryView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                Text("Your Travel Plan")
-                    .font(.largeTitle)
-                    .padding()
-                
-                Text("Destination: \(itinerary.destination)")
-                Text("From: \(formattedDate(itinerary.startDate))")
-                Text("To: \(formattedDate(itinerary.endDate))")
-                Text("Activities: \(itinerary.activity)")
-                
-                Image("Adventure") // Add a travel image asset in your Assets.xcassets
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 200)
-                
-                Spacer()
+            ScrollView {
+                VStack(spacing: 20) {
+                    Text("Your Travel Plan")
+                        .font(.largeTitle)
+                        .padding()
+                        .accessibilityAddTraits(.isHeader)
+                    
+                    Text("Destination: \(itinerary.destination)")
+                    Text("From: \(formattedDate(itinerary.startDate))")
+                    Text("To: \(formattedDate(itinerary.endDate))")
+                    Text("Activities: \(itinerary.activity)")
+                    
+                    Image("Adventure")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 200)
+                        .accessibilityHidden(true)
+                    
+                    Spacer()
+                }
+                .padding()
             }
-            .padding()
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: Button("Done") {
                 dismissAction()
             })

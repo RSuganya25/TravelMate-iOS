@@ -6,7 +6,15 @@ struct ItineraryListView: View {
     var body: some View {
         List {
             ForEach(itineraryViewModel.itineraries) { itinerary in
-                Text(itinerary.destination)
+                NavigationLink(destination: ItineraryDetailView(itinerary: itinerary)) {
+                    VStack(alignment: .leading) {
+                        Text(itinerary.destination)
+                            .font(.headline)
+                        Text("\(formattedDate(itinerary.startDate)) → \(formattedDate(itinerary.endDate))")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
             .onDelete(perform: deleteItinerary)
         }
@@ -18,6 +26,12 @@ struct ItineraryListView: View {
 
     func deleteItinerary(at offsets: IndexSet) {
         itineraryViewModel.itineraries.remove(atOffsets: offsets)
+    }
+
+    private func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
     }
 }
 
